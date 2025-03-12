@@ -22,8 +22,28 @@ function generateCss() {
     result.style.boxShadow = str;
 }
 
+function generateGradient() {
+    let color1 = document.getElementById('gradientColor1').value;
+    let color2 = document.getElementById('gradientColor2').value;
+    let direction = document.getElementById('gradientDirection').value;
+
+    let gradientResult = document.getElementById('gradientResult');
+    let gradientTextarea = document.getElementById('gradientCssCode');
+
+    let gradientStr = `linear-gradient(${direction}deg, ${color1}, ${color2})`;
+    gradientTextarea.value = 'background:' + gradientStr;
+    gradientResult.style.background = gradientStr;
+}
+
 for(let item of document.querySelectorAll('input')) {
-    item.addEventListener('input', generateCss)
+    item.addEventListener('input', function() {
+        if (item.closest('form').id === 'gradientForm') {
+            generateGradient();
+        } else {
+            generateCss();
+        }
+    });
 }
 
 generateCss();
+generateGradient();

@@ -19,7 +19,7 @@ form {
   display: inline-flex;
   flex-direction: column;
 }
-#result {
+#result, #gradientResult {
   width: 60px;
   height: 60px;
   background-color: rgb(219, 157, 56);
@@ -36,13 +36,13 @@ textarea {
   padding-bottom: 10px;
   border-bottom: 2px dashed gray;
 }
-#color {
+#color, #gradientColor1, #gradientColor2 {
   width: 40px;
   height: 40px;
   border: none;
   padding: 0;
   margin: 0;
 }
-#opacity {
+#opacity, #gradientDirection {
   margin-bottom: 30px;
 }

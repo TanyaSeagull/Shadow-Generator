@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="box-shadow-generator.css">
-  <title>Box-shadow Generator</title>
+  <title>Box-shadow & Gradient Generator</title>
 </head>
 
 <body>
@@ -41,6 +41,26 @@
     <h3>Результат</h3>
     <div id="result"></div>
     <textarea id="cssCode" readonly></textarea>
+  </form>
+
+  <!-- Новый раздел генератор градиента -->
+  <h2>Gradient Generator</h2>
+  
+  <form id="gradientForm">
+    <h3>Настройки</h3>
+    
+    <label for="gradientColor1">Цвет 1</label>
+    <input type="color" id="gradientColor1" value="#ff0000">
+    
+    <label for="gradientColor2">Цвет 2</label>
+    <input type="color" id="gradientColor2" value="#0000ff">
+    
+    <label for="gradientDirection">Направление (deg)</label>
+    <input type="range" id="gradientDirection" min="0" max="360" step="1" value="90">
+    
+    <h3>Результат</h3>
+    <div id="gradientResult"></div>
+    <textarea id="gradientCssCode" readonly></textarea>
   </form>
 
   <script src="app.js"></script>
